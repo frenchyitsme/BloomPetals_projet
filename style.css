@@ -1,0 +1,230 @@
+
+a:root {
+  --vert: #2f5d50;
+  --rose: #e9c9d0;
+  --rose-fonce: #c98a9b;
+  --creme: #faf7f4;
+  --gris-clair: #eeeeee;
+  --texte: #1c1c1c;
+  --police: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: var(--police);
+  color: var(--texte);
+  background-color: var(--creme);
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none; 
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%; 
+}
+
+
+a:focus-visible {
+  outline: 3px solid var(--vert);
+  outline-offset: 3px;
+}
+
+
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+
+.entete {
+  background-color: var(--gris-clair);
+  padding-top: 2.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flexbox;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+
+.logo::before {
+  content: "";
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+  background-color: var(--rose-fonce);
+}
+
+
+.menu {
+  display: flex;
+  justify-content: flexbox;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 4rem;
+  padding: 0.9rem 1rem;
+  font-weight: 700;
+}
+
+.entete .menu {
+  background-color: #f6f6f6;
+}
+
+.menu a {
+  padding: 0.3rem 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+  border-bottom-color: var(
+    --vert
+  );
+  
+.hero {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  justify-content: flexbox;
+  align-items: flex-start; 
+  gap: 2rem;
+  min-height: 33rem;
+  padding: 3rem 10%;
+  background-color: var(--rose);
+}
+
+.hero h1 {
+  max-width: 22ch;
+  font-size: clamp(2.2rem, 5vw, 3.5rem); 
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.bouton {
+  min-width: min(100%, 20rem);
+  padding: 1.6rem 2.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--vert);
+}
+
+.bouton:hover {
+  background-color: #244a40;
+}
+
+
+.realisations,
+.services {
+  padding: 3.5rem 3.5%;
+}
+
+.realisations {
+  background-color: #f0f0f0;
+}
+
+.realisations h2,
+.services h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.services h2 {
+  margin-bottom: 3.5rem;
+}
+
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+
+.grille img {
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  object-fit: cover; /* l'image remplit le cadre sans se déformer */
+  background-color: #c5c5c5; /* gris tant que la photo n'existe pas */
+}
+
+figcaption {
+  padding-top: 0.6rem;
+  font-weight: 700;
+}
+
+.service h3 {
+  margin: 1.2rem 0 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.service p {
+  margin-bottom: 1.2rem;
+}
+
+.service a {
+  font-weight: 700;
+  border-bottom: 2px solid var(--rose-fonce);
+}
+
+.service a:hover {
+  color: var(--vert);
+  border-bottom-color: var(--vert);
+}
+
+.pied {
+  margin-top: 2rem;
+  padding: 3rem 1rem 2rem;
+  text-align: center;
+  background-color: #d2d2d2;
+}
+
+.pied .menu {
+  padding-top: 0;
+}
+
+.pied small {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 800px) {
+  .grille {
+    grid-template-columns: 1fr;
+  }
+
+  .menu {
+    gap: 0.5rem 1.5rem;
+  }
+
+  .hero {
+    min-height: 26rem;
+    padding: 2rem 1.5rem;
+  }
+
+}
