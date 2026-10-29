@@ -147,6 +147,13 @@ a:focus-visible {
   background-color: #284840;
 }
 
+.pfond {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+}
+
 .services {
   padding: 3.5rem 3.5%;
   background-color: transparent;
@@ -183,6 +190,12 @@ a:focus-visible {
 figcaption {
   padding-top: 0.6rem;
   font-weight: 700;
+}
+
+.service .pfond {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1.2rem;
+  border-radius: 8px;
 }
 
 .service h3 {
@@ -233,4 +246,6 @@ figcaption {
     min-height: 26rem;
     padding: 2rem 1.5rem;
   }
+
+  /* formulaire de contact */
 }
